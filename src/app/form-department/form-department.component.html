@@ -1,0 +1,14 @@
+<div class="container">
+	<form class="inputFormulario" #form="ngForm">
+        <div>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ventas" [(ngModel)]="department.nombre" name="name" required>
+            </mat-form-field>
+        </div>
+        <div class="buttons">
+            <button mat-flat-button (click)="submit()" [disabled]="!form.valid">Guardar</button>
+            <button mat-flat-button mat-dialog-close (click)="closeDialog()" >Cancelar</button>
+        </div>
+	</form>
+</div>

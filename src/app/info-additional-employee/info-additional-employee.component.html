@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-divider></mat-divider>
+    <h2>Consultar información de empleados</h2>
+
+    <button mat-flat-button (click)="getHighestSalary()">Salario Mas Alto</button>
+    <button mat-flat-button color="primary" (click)="getLowestAge()">Edad más baja</button>
+    <button mat-flat-button color="primary" (click)="getCountLastMonth()">Ingresos último mes</button>
+
+    <div *ngIf="result">
+    <h3>Resultado:</h3>
+    <p>{{ result }}</p>
+  </div>
+</div>

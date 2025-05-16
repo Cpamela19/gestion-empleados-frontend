@@ -1,0 +1,18 @@
+table {
+    padding: 1% 10% 0% 10%;
+    background-color: #b4c3d2;
+}
+
+th.mat-mdc-header-cell {
+    background-color: #11428b;
+    font-size: 18px;
+}
+
+td.mat-mdc-cell {
+    color: #101414;
+    font-size: 16px;
+}
+
+h2 {
+    padding: 1% 10% 0% 10%;
+}

@@ -1,0 +1,10 @@
+
+.mat-mdc-unelevated-button:not(:disabled) {
+    background-color: #11428b;
+    color: rgba(255, 238, 238, 0.868);
+    padding: 1%;
+}
+
+.container {
+    padding: 1% 10% 0% 10%;
+}

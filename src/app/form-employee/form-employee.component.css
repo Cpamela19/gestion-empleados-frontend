@@ -1,0 +1,28 @@
+.container {
+    padding: 50px;
+}
+
+.inputFormulario {
+    height: 20px;
+}
+
+.mat-mdc-unelevated-button:not(:disabled) {
+    background-color: #474747;
+    color: rgba(255, 238, 238, 0.868);
+    padding: 6%;
+    margin-right: 4%;
+}
+
+.mat-flat-button {
+    padding: 4%;
+}
+
+.mat-mdc-form-field {
+    width: 70%;
+    padding-bottom: 3%;
+}
+
+.mat-mdc-unelevated-button[disabled], .mat-mdc-unelevated-button.mat-mdc-button-disabled {
+    padding: 6%;
+    margin-right: 4%;
+}

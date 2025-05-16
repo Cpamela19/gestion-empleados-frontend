@@ -1,0 +1,70 @@
+<div class="container">
+	<form class="inputFormulario" #form="ngForm">
+        <div>
+            <mat-form-field>
+                <mat-label>Nombres</mat-label>
+                <input matInput placeholder="Pamela" [(ngModel)]="employee.nombre" name="name" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Prueba" [(ngModel)]="employee.apellido" name="lastName" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Edad</mat-label>
+                <input matInput placeholder="22" [(ngModel)]="employee.edad" name="age" (keypress)="allowOnlyNumbers($event)" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Rol</mat-label>
+                <input matInput placeholder="Desarrollador" [(ngModel)]="employee.rol" name="rol" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Salario</mat-label>
+                <input matInput placeholder="50" [(ngModel)]="employee.salario" name="salary" (keypress)="allowOnlyNumbers($event)" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Fecha Ingreso</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="employee.fechaIngreso" name="dateEntry" required>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Fecha Salida</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="employee.fechaSalida" name="dateOutput">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    
+        <div>
+            <mat-form-field>
+                <mat-label>Departamento</mat-label>
+                <mat-select [(ngModel)]="selectedDepartment" name="department" required>
+                    @for (dept of activeDepartments; track dept) {
+                        <mat-option [value]="dept.id">{{dept.nombre}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <button mat-flat-button mat-dialog-close (click)="submit()" [disabled]="!form.valid">Guardar</button>
+            <button mat-flat-button (click)="closeDialog()">Cancelar</button>
+        </div>
+        
+	</form>
+</div>
